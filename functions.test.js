@@ -1,4 +1,4 @@
-const { capitalize, reverseString } = require('./functions');
+const { capitalize, reverseString, calculator } = require('./functions');
 
 // Testing capitalize func
 test('Capitalize peanut', () => {
@@ -17,6 +17,15 @@ test('Capitalize ionBasha', ()=> {
 // Testing reverseString func
 
 test('Reverse peanuts', () => {
-    let result = reverseString('peanuts');
-    expect(result).toBe("stunaep");
+    expect(reverseString("peanuts")).toBe("stunaep");
+});
+
+// Testing calculator
+
+test('Calculate 2 + 2', () => {
+    expect(calculator(2, '+', 2)).toBe(4);
+});
+
+test('Calculate 7 * 7', () => {
+    expect(calculator(7, 'x', 7)).toBe(49);
 });
